@@ -64,9 +64,9 @@ logger.info(f"App LLM provider: Google Gemini.")
 
 
 AVAILABLE_GEMINI_MODELS = { 
-    "Gemini 1.5 Flash (Latest)": "gemini-1.5-flash-latest",
-    "Gemini 1.5 Pro (Latest)": "gemini-1.5-pro-latest",
-    "Gemini 1.0 Pro": "gemini-pro", # Older, but good for general tasks
+    "Gemini 2 Flash (Latest)": "gemini-2.0-flash",
+    "Gemini 1.5 Flash (Latest)": "gemini-1.5-flash",
+    "Gemini 1.5 Pro (Latest)": "gemini-1.5-pro"
 }
 
 
@@ -199,8 +199,8 @@ logger.info("Streamlit app started.")
 vector_store_pinecone = load_vector_store_from_pinecone()
 retriever = None
 if vector_store_pinecone:
-    retriever = vector_store_pinecone.as_retriever(search_type="mmr", search_kwargs={"k": 5, "fetch_k": 20})
-    logger.info("Retriever initialized from Pinecone with MMR search, k=5, fetch_k=20.")
+    retriever = vector_store_pinecone.as_retriever(search_type="mmr", search_kwargs={"k": 15, "fetch_k": 20})
+    logger.info("Retriever initialized from Pinecone with MMR search, k=15, fetch_k=20.")
 
 st.sidebar.header("LLM Configuration (Google Gemini)")
 selected_model_display_name = st.sidebar.selectbox(
@@ -209,7 +209,6 @@ selected_model_display_name = st.sidebar.selectbox(
     index=0 
 )
 selected_gemini_model_id = AVAILABLE_GEMINI_MODELS[selected_model_display_name]
-logger.info(f"User selected LLM (Gemini): {selected_model_display_name} ({selected_gemini_model_id})")
 
 llm = get_llm(selected_gemini_model_id) 
 agent_executor = None

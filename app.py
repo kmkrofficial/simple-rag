@@ -191,7 +191,7 @@ logger.info("Streamlit app started.")
 vector_store_pinecone = load_vector_store_from_pinecone()
 retriever = None
 if vector_store_pinecone:
-    retriever = vector_store_pinecone.as_retriever(search_type="mmr", search_kwargs={"k": 5, "fetch_k": 20})
+    retriever = vector_store_pinecone.as_retriever(search_type="mmr", search_kwargs={"k": 10, "fetch_k": 20})
     logger.info("Retriever initialized from Pinecone with MMR search, k=5, fetch_k=20.")
 
 st.sidebar.header("LLM Configuration (Ollama)")
