@@ -1,0 +1,50 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+.eggs/
+*.log
+
+# Virtual environments
+env/
+venv/
+.model-env/
+
+# VSCode
+.vscode/
+.history/
+
+# Environment variables
+.env
+.env.*
+
+# Data
+data/
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# PyTorch cache
+*.pt
+*.pth
+*.ckpt
+
+# Streamlit cache
+.streamlit/
+
+# Others
+*.sqlite3
