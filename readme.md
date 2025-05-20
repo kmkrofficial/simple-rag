@@ -1,7 +1,3 @@
-Okay, here is the complete, revised `README.md` file incorporating all the details and clarifications.
-
----
-
 # Simple RAG: A Flexible Retrieval Augmented Generation Chatbot
 
 ## 1. Project Purpose
