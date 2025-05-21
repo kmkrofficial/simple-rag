@@ -95,17 +95,17 @@ With your virtual environment activated, install the necessary Python packages.
     langchain-huggingface # For HuggingFaceEmbeddings
 
     # LLM Backends
-    ollama # For Ollama integration
-    langchain-google-genai # For Google Gemini integration
-    transformers # For local Hugging Face LLM generation
-    accelerate # Helper for transformers, especially for device mapping
-    bitsandbytes # For 8-bit/4-bit quantization of local HF models (optional)
+    ollama 
+    langchain-google-genai
+    transformers
+    accelerate
+    bitsandbytes
 
     # Application & Utilities
     streamlit
-    beautifulsoup4 # For HTML parsing
-    python-dotenv # For managing .env files
-    tiktoken # Tokenizer used by some Langchain components
+    beautifulsoup4
+    python-dotenv
+    tiktoken
 
     # PyTorch (for Hugging Face models: embeddings & local LLM generation)
     # It's CRITICAL to install PyTorch correctly for your system, especially for CUDA.
